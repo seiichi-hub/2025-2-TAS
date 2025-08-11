@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAS 25학년도 2학기 활동회원 모집</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/mona-sans');
+
+        body {
+            font-family: 'Mona Sans', 'Pretendard', sans-serif;
+            background: #0F172A; /* 다크 네이비 배경 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 3rem 0;
+        }
+
+        #presentation-container {
+            width: 1080px;
+            min-height: 1350px;
+            background: radial-gradient(circle at top left, #1E293B, #0F172A 50%);
+            border-radius: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* 좌측 정렬 */
+            text-align: left;
+        }
+
+        .header {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        
+        .main-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 6.5rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #F1F5F9; /* 밝은 회색 */
+            letter-spacing: -4px;
+        }
+
+        .main-title .tas-highlight {
+            background: linear-gradient(45deg, #38BDF8, #A78BFA); /* 스카이블루 -> 퍼플 그라디언트 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.75rem;
+            color: #94A3B8; /* 회색 텍스트 */
+            margin-top: 2rem;
+            max-width: 700px;
+        }
+
+        .section {
+            width: 100%;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #94A3B8;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase; /* 대문자 */
+            letter-spacing: 1px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .info-card {
+            background-color: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #E2E8F0;
+            margin-bottom: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .info-card p, .info-card ul {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: #94A3B8;
+        }
+        .info-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .info-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .full-width-card {
+            grid-column: span 2;
+        }
+        
+        .schedule-list {
+            list-style-type: disc !important;
+            padding-left: 3rem !important;
+        }
+
+        .qr-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 1rem;
+        }
+
+        .qr-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .footer-section {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-top: 4rem;
+            border-top: 1px solid #334155;
+        }
+        
+        .apply-button {
+            background: linear-gradient(45deg, #38BDF8, #818CF8);
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 20px 50px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+        }
+        .apply-button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4);
+        }
+        
+        .footer-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .sub-note {
+            font-size: 1.1rem;
+            color: #64748B;
+            margin-top: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="presentation-container">
+        <div class="content-wrapper">
+            <div class="header section">
+                <h1 class="main-title">
+                    Build your<br>
+                    Expertise at <span class="tas-highlight">TAS.</span>
+                </h1>
+                <p class="subtitle">
+                    세무 전문가를 향한 가장 확실한 여정, 세무학회 TAS에서 당신의 가능성을 증명하세요.
+                    25학년도 2학기 활동회원을 모집합니다.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">About TAS</h2>
+                <div class="info-card full-width-card">
+                    <h3>Our Mission</h3>
+                    <p>우리는 ‘세법’을 단순 학습하는 것을 넘어, 실무에서 발생할 수 있는 세무 관련 이슈를 다루며 실무 중심의 경험을 제공합니다. 국내조세와 국제조세 분야를 각각 탐구하고, 각 주제는 실무에 맞춘 프로젝트 형식으로 진행됩니다. 활동 결과물은 홈페이지에 아카이빙하여 기록과 성과를 남깁니다.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">What We Do</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>국내조세</h3>
+                        <ul>
+                            <li>최신 세법 개정안 분석: 회계법인팀(개정안 연구)과 고객사팀(기업 정보 분석)으로 나누어 수행</li>
+                            <li>대기업 가업승계 사례 분석: 최근 승계를 진행한 한화 사례 분석 및 회계법인의 제안서 작성 실습</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>국제조세</h3>
+                        <ul>
+                            <li>이전가격 계산 실습: 이전가격 실무 프로세스를 이해하고 실제 세액 도출</li>
+                            <li>국제조세 회피안 제안 프로젝트: 유명 해외기업의 조세회피 사례를 연구하고 유사 국내기업에 제안</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">What you can learn</h2>
+                 <div class="info-card full-width-card">
+                    <ul>
+                        <li>회계/세무업 실무용 Excel 활용 및 문서 작성 능력</li>
+                        <li>NICE Bizline, VALUEsearch 등 기업 정보 사이트 활용 및 분석 능력</li>
+                        <li>GPT·Gemini 등의 실무 접목 및 AI 결과물 검토 및 비판적 활용 방법</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Who we're looking for</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <p>활동에 꾸준히 참여하며 맡은 부분에 책임감을 가지고 수행할 수 있는 분</p>
+                    </div>
+                    <div class="info-card">
+                        <p>주제에 대한 열정과 흥미가 있으며, 최소 주 3시간 이상 투자 가능한 분</p>
+                    </div>
+                </div>
+                <p class="sub-note">※ 방법은 모두 안내하니 학년·사전지식 무관, 입문자도 환영합니다.<br>※ 면접은 단순한 대화 형식으로 진행됩니다.</p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Recruitment Info</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>모집 정보</h3>
+                        <ul>
+                            <li><b>모집 인원:</b> 20명(세무학과 우선 선발)</li>
+                            <li><b>활동 일시:</b> 매주 수요일 오후 7시(법학관 201호)</li>
+                            <li class="mt-4"><b>모집 일정:</b>
+                                <ul class="schedule-list mt-2">
+                                    <li>지원서 접수: 8/11 ~ 8/17</li>
+                                    <li>비대면 면접: 8/19 ~ 8/20</li>
+                                    <li>합격자 발표: 8/21</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>지원 링크 (QR)</h3>
+                        <div class="qr-container">
+                            <img src="https://i.postimg.cc/C1SGMYw2/QR.png" alt="지원 QR 코드">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section section">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-Ji1flSZd-4iC-lOxatanQdcFMR9WliwxhQg5CCBkKkS9nA/viewform?usp=sharing&ouid=111212618689147429888" target="_blank" class="apply-button">Apply Now</a>
+                <img src="https://i.postimg.cc/cLPTSVgq/TAS.png" alt="TAS 학회 로고" class="footer-logo">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+
+            // --- 스크롤 애니메이션 옵저버 ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
